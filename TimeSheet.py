@@ -8,8 +8,8 @@ import SearchTools as st
 import ScreenshotTool as sst
 
 
-image_path = 'C:\\Users\\wfloyd\\OneDrive - The Kleingers Group\\Documents\\GeneralAutomationTools\\UnanetTest'
-
+#image_path = 'C:\\Users\\wfloyd\\OneDrive - The Kleingers Group\\Documents\\GeneralAutomationTools\\UnanetTest'
+image_path = '/Users/williamfloyd/Documents/PythonCode/GeneralAutomationTools/UnanetTest'
 
 #%%
 sst.take_screenshot_and_save(path=image_path)
