@@ -13,7 +13,8 @@ from pytesseract import Output
 import ctypes
 
 # If on Windows, tell pytesseract where to find the .exe:
-pytesseract.pytesseract.tesseract_cmd = r"C:\Users\wfloyd\AppData\Local\Programs\Tesseract-OCR\tesseract.exe"
+#pytesseract.pytesseract.tesseract_cmd = r"C:\Users\wfloyd\AppData\Local\Programs\Tesseract-OCR\tesseract.exe"
+pytesseract.pytesseract.tesseract_cmd = r"/opt/homebrew/bin/tesseract.exe"
 
 
 #base_path = 'C:\\Users\\wfloyd\\OneDrive - The Kleingers Group\\Documents\\Python Scripts\\MiscellaneousPython\\ScreenShots'

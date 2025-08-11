@@ -6,7 +6,8 @@ import tkinter as tk
 from tkinter import simpledialog, messagebox
 import os
 import pyautogui
-from PIL import Image
+from PIL import Image, ImageTk
+import mss
 
 # Call this before launching the canvas window
 def get_save_path(path=''):
@@ -34,6 +35,14 @@ class SnippingTool:
     def __init__(self,save_path):
         self.save_path = save_path
 
+        # Take a screenshot first
+        with mss.mss() as sct:
+            monitor = sct.monitors[0]
+            self.screenshot = Image.frombytes(
+                "RGB", (monitor["width"], monitor["height"]),
+                sct.grab(monitor).rgb
+            )
+
         self.root = tk.Tk()
         self.root.attributes("-fullscreen", True)
         self.root.attributes("-alpha", 0.8)  # Transparent overlay
@@ -41,6 +50,7 @@ class SnippingTool:
 
         self.canvas = tk.Canvas(self.root, cursor="cross", bg="gray")
         self.canvas.pack(fill=tk.BOTH, expand=True)
+
 
         self.start_x = None
         self.start_y = None
