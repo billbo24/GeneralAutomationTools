@@ -35,3 +35,5 @@ for imageName,doubleClick,altImage in images:
         st.repeat_find_click(imageName,image_path,double_click = doubleClick,alt_image=altImage)
     else:
         st.repeat_find_click(imageName,image_path,double_click = doubleClick)
+
+# %%
