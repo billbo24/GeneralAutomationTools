@@ -1,8 +1,6 @@
 
-#%% Just a general testing and scrap file
 
-
-
+#%%
 def alternate_case(s):
     result = ""
     upper = False  # Start with lowercase
@@ -18,5 +16,6 @@ def alternate_case(s):
     return result
 
 # Example usage
-alternate_case("hey guys what'going on?")
+#a = alternate_case("hey guys what'going on?")
+#print(a)
 # %%
